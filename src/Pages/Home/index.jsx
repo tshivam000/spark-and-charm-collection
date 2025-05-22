@@ -65,6 +65,7 @@ const Home = () => {
             <p className='text-[25px]  font-[700] '>- Only Rs.500</p>
          </div>
          <AddBannerSlider items={4}/>
+         
         </div>
         </section>
       <section className='py-3 bg-white'>
