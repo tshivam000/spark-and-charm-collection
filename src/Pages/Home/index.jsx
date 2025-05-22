@@ -67,7 +67,6 @@ const Home = () => {
          <AddBannerSlider items={4}/>
         </div>
         </section>
-
       <section className='py-3 bg-white'>
         <div className='container'>
           <h2 className='text-[20px] font-[600]'>Latest Products</h2>
