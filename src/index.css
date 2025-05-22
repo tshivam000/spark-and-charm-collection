@@ -112,3 +112,30 @@ body{
   padding: 15px;
   margin:0 -15px;
 }
+.swiper-pagination-bullet-active{
+  background: #ff5252!important;
+}
+.homeSliderV2 .swiper-slide-active .info{
+  right: 0 !important;;
+  opacity: 1 !important;
+}
+.homeSliderV2 .swiper-slide-active .info :where(h4,h3,h2,.btn-wrap) {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.homeSliderV2 .info h4{
+  transition-duration: 1s;
+}
+.homeSliderV2 .info h2{
+  transition-duration: 1.2s;
+}
+.homeSliderV2 .info h3{
+  transition-duration: 1.4s;
+}
+.homeSliderV2 .info .btn-wrap{
+  transition-duration: 1.6s;
+}
+.btn-org{
+  background: #ff5252!important;
+  color: #fff!important;
+}

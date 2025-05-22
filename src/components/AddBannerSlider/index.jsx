@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import BannerBox from '../BannerBox';
+
 const AddBannerSlider = (props) => {
   return (
     <div className='py-5 w-full'>
