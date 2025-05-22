@@ -1,9 +1,9 @@
 import React from 'react'
-
-const index = () => {
+import './footer.css'
+const Footer = () => {
   return (
-    <div>index</div>
+    <div className='footer'>index</div>
   )
 }
 
-export default index
+export default Footer
