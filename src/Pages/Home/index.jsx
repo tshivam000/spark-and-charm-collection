@@ -86,7 +86,6 @@ const Home = () => {
       <section className='py-3 pb-8 bg-white blogSection'>
         <div className='container'>
         <h2 className='text-[20px] font-[600] mb-4'>From The Blog</h2>
-
         <Swiper
         slidesPerView={4}
         spaceBetween={30}
