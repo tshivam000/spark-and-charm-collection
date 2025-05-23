@@ -3,6 +3,7 @@ import HomeSlider from '../../components/HomeSlider'
 import HomeCatSlider from '../../components/HomeCatSlider'
 import { TbTruckDelivery } from "react-icons/tb";
 import AddBannerSlider from '../../components/AddBannerSlider';
+import AddsBannerSliderV2 from '../../components/AddsBannerSliderV2';
 import ProductSlider from '../../components/ProductSlider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -77,7 +78,7 @@ const Home = () => {
             </div>
             <p className='text-[25px]  font-[700] '>- Only Rs.500</p>
          </div>
-         <AddBannerSlider items={4}/>
+         <AddsBannerSliderV2 items={4}/>
         </div>
         </section>
 
