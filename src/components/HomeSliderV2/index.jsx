@@ -6,27 +6,28 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Button from '@mui/material/Button';
 
 const HomeSliderV2 = () => {
   return (
-    <div>
+    <>
         <Swiper
         loop={true}
         spaceBetween={30}
         effect={'fade'}
         navigation={true}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        modules={[EffectFade, Navigation, Pagination,Autoplay]}
         className="homeSliderV2"
       >
         <SwiperSlide>
           <div className='item w-full rounded-md overflow-hidden'>
             <img className='w-full' src="./images/womendress.jpg" />
-            <div className='info absolute top-0 -right-[100%] w-[50%] h-[100%] z-50 flex items-center flex-col opacity-0 justify-center transition-all duration-500'>
+            <div className='p-5 info absolute top-0 -right-[100%] w-[50%] h-[100%] z-50 flex items-center flex-col opacity-0 justify-center transition-all duration-500'>
                 <h4 className='text-[18px] font-[500] w-full text-left mb-3 relative -right-[100%] opacity-0 transition-all'>
                     Big Saving Days Sale
                 </h4>
@@ -68,7 +69,7 @@ const HomeSliderV2 = () => {
         </SwiperSlide>
 
       </Swiper>
-    </div>
+    </>
   )
 }
 
