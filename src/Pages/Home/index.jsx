@@ -3,6 +3,7 @@ import HomeSlider from '../../components/HomeSlider'
 import HomeCatSlider from '../../components/HomeCatSlider'
 import { TbTruckDelivery } from "react-icons/tb";
 import AddBannerSlider from '../../components/AddBannerSlider';
+import AddsBannerSliderV2 from '../../components/AddsBannerSliderV2';
 import ProductSlider from '../../components/ProductSlider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -13,6 +14,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import BlogItem from '../../components/BlogItem';
 import HomeSliderV2 from '../../components/HomeSliderV2';
+import BannerBoxV2 from '../../components/BannerBoxV2';
 
 
 const Home = () => {
@@ -24,9 +26,13 @@ const Home = () => {
     <>
       <HomeSlider />
       <section className='py-6'>
-        <div className='container flex items-center'>
-          <div className='part1 w-[75%]'>
+        <div className='container flex '>
+          <div className='part1 w-[70%] flex items-center'>
             <HomeSliderV2 />
+          </div>
+          <div className='part2 w-[30%] pl-5 gap-5 flex items-center justify-center flex-col'>
+            <BannerBoxV2 info='right' image={'./images/sleeper.jpg'}/>
+            <BannerBoxV2 info='left' image={'./images/iphone13.jpg'}/>
           </div>
         </div>
       </section>
@@ -72,7 +78,7 @@ const Home = () => {
             </div>
             <p className='text-[25px]  font-[700] '>- Only Rs.500</p>
          </div>
-         <AddBannerSlider items={4}/>
+         <AddsBannerSliderV2 items={4}/>
         </div>
         </section>
       <section className='py-3 bg-white'>

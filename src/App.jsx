@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
+import ProductListing from './Pages/ProductListing'
 function App() {
 
   return (
@@ -10,7 +11,8 @@ function App() {
       <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path={'/'} exact={true} element={<Home />} />
+        <Route path={'/productListing'} exact={true} element={<ProductListing />} />
       </Routes>
       </BrowserRouter>
       <Footer/>
