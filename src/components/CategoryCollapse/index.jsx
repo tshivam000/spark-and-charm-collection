@@ -22,7 +22,6 @@ const CategoryCollapse = () => {
       setInnerSubmenuIndex(index);
       }
   }
-
     return (
     <>
           <div className='scroll'>
