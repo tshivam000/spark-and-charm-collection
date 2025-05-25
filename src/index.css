@@ -138,4 +138,19 @@ body{
 .btn-org{
   background: #ff5252!important;
   color: #fff!important;
+  font-weight: 500;
+}
+.btn-org:hover{
+  background: #171717!important;
+}
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate{
+    color: #ff5252!important;
+}
+.MuiCheckbox-root{
+  padding: 6px !important;
+}
+.itemViewActions button.active svg{
+  color: #ff5252!important;
+  opacity: 1;  
 }

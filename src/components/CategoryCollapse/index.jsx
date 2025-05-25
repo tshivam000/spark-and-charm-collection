@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
-import { IoCloseSharp } from "react-icons/io5";
 import { FaRegPlusSquare } from "react-icons/fa";
 import { FiMinusSquare } from "react-icons/fi";
 
@@ -24,8 +23,8 @@ const CategoryCollapse = () => {
   }
     return (
     <>
-          <div className='scroll'>
-        <ul className='w-full'>
+        <div className='scroll'>
+          <ul className='w-full'>
             <li className='list-one flex items-center relative flex-col'>
                 <Link to='/' className='w-full'>
                 <Button className='w-full !text-left !justify-start px-3 !text-[rgba(0,0,0,0.8)]'>Fashion</Button>
@@ -56,7 +55,7 @@ const CategoryCollapse = () => {
                   }
                   {
                     innerSubmenuIndex === 0 &&
-                          <ul className='inner_submenu w-full pl-3' >
+                    <ul className='inner_submenu w-full pl-3' >
                     <li className='list-one relative mb-1'>
                     <Link to='/' className='link w-full !text-left !justify-start px-3 transition text-[14px]'>
                       Smart Tablet
@@ -78,7 +77,7 @@ const CategoryCollapse = () => {
                     </Link>
                   </li>
                 </ul>
-}
+                }
                 </li>
               </ul>
               }
@@ -138,7 +137,7 @@ const CategoryCollapse = () => {
                     </Link>
                   </li>
                 </ul>
-}
+                }
                 </li>
               </ul>
               }
