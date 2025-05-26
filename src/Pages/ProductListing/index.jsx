@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Sidebar from '../../components/Sidebar'
-import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import ProductItem from '../../components/ProductItem';
@@ -10,6 +9,7 @@ import { IoGridSharp } from 'react-icons/io5';
 import { LuMenu } from 'react-icons/lu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Pagination from '@mui/material/Pagination';
 
 const ProductListing = () => {
   const [itemView, setItemView ] = useState('grid');
@@ -22,7 +22,7 @@ const ProductListing = () => {
     setAnchorEl(null);
   };
   return (
-    <section className='py-5'>
+    <section className='py-5 pb-0'>
         <div className='container'>
             <Breadcrumbs aria-label="breadcrumb">
                 <Link className='link transition' underline="hover" color="inherit" href="/">
@@ -111,6 +111,10 @@ const ProductListing = () => {
                         </>
                     }
                     
+                </div>
+
+                <div className='flex items-center justify-center mt-10'>
+                    <Pagination count={10} showFirstButton showLastButton />
                 </div>
             </div>
             </div>
