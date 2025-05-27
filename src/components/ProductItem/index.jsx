@@ -14,8 +14,8 @@ const ProductItem = () => {
       <div className='group imgWrapper w-[100%] rounded-md relative'>
         <Link to={'/'}>
           <div className='img h-[250px] overflow-hidden relative'>
-            <img src="./images/Saree.webp" alt="Product" className='w-full' />
-            <img src="./images/saree-hover.webp" alt="Product" className='w-full absolute top-0 left-0 opacity-0
+            <img src="../images/Saree.webp" alt="Product" className='w-full' />
+            <img src="../images/saree-hover.webp" alt="Product" className='w-full absolute top-0 left-0 opacity-0
             group-hover:opacity-100 group-hover:scale-110 transition-all duration:700' />
           </div>
         </Link>
@@ -37,8 +37,8 @@ const ProductItem = () => {
           </Button>
         </div>
       </div>
-      <div className='info p-3  py-4'>
-        <h6 className='text-[13px]'><Link className='link' to={'/'}>Soylent Green</Link></h6>
+      <div className='info p-3  py-5 '>
+        <h6 className='text-[13px] !font-[400]'><Link className='link' to={'/'}>Soylent Green</Link></h6>
         <h3 className='text-[14px] title mt-1 mb-1 font-[500] text-[rgba(0,0,0,1)] transition-all'>
         <Link className='link transition-all' to={'/'}>
         Siril Georgette Pink Color Saree with Blouse Piece

@@ -37,9 +37,9 @@ const ProductItem = () => {
           </Button>
         </div>
       </div>
-      <div className='info p-3 py-4 w-[75%] flex flex-col justify-start'>
-        <h6 className='text-[13px]'><Link clssName='link' to={'/'}>Soylent Green</Link></h6>
-        <h3 className='text-[18px] title mt-1 mb-2 font-[600] text-[rgba(0,0,0,1)] transition-all'>
+      <div className='info p-3 py-4 w-[75%] '>
+        <h6 className='text-[13px] !font-[400]'><Link clssName='link' to={'/'}>Soylent Green</Link></h6>
+        <h3 className='text-[18px] title mt-1 mb-2 font-[500] text-[rgba(0,0,0,1)] transition-all'>
         <Link className='link transition-all' to={'/'}>
         Siril Georgette Pink Color Saree with Blouse Piece
         </Link>
