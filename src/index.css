@@ -222,3 +222,10 @@ h1,h2,h3,h4,h5,h6{
 .reviewScroll::-webkit-scrollbar-thumb{
   background-color: #ccc !important;
 }
+.btn-lg{
+  font-size: 18px!important;
+  padding:10px 20px !important;
+}
+.cartPanel .MuiPaper-root{
+  width: 400px;
+}

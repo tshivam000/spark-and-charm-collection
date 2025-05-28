@@ -31,7 +31,7 @@ const openCategoryPanel = () => {
                     </Link>
                 </li>
                 <li className='list-none relative'>
-                    <Link to='/' className='text-[14px] link font-[500] transition'>
+                    <Link to='/productListing' className='text-[14px] link font-[500] transition'>
                     <Button className='!py-3 link transtion !font-[500} !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Fashion</Button>
                     </Link>
                     <div className='submenu absolute top-[120%] opacity-0 transition-all left-[0] min-w-[180px] bg-white shadow-md'>

@@ -36,7 +36,7 @@ const ProductZoom = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 1 ? 'opacity-1':'opacity-50'}`} onClick={()=> goto(1) }>
-            <img src="../public/images/saree-hover.webp" alt='Groceries' className='w-full transition-all group-hover:scale-105' />
+            <img src="../images/saree-hover.webp" alt='Groceries' className='w-full transition-all group-hover:scale-105' />
           </div>
         </SwiperSlide>
         <SwiperSlide>

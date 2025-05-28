@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.css';
 import { Link } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
@@ -6,9 +6,11 @@ import { Button } from '@mui/material';
 import { FaRegHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { MdOutlineZoomOutMap } from "react-icons/md";
+import { MyContext } from '../../App';
 
 
 const ProductItem = () => {
+  const context = useContext(MyContext)
   return (
     <div className='productItem rounded-md overflow-hidden shadow-md '>
       <div className='group imgWrapper w-[100%] rounded-md relative'>
@@ -24,16 +26,17 @@ const ProductItem = () => {
         <div className='actions duration-300 absolute top-[-200px] right-[15px]  flex items-center 
         flex-col gap-2 z-50 w-[50px] transition-all group-hover:top-[10px]'> 
           <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white 
-          text-black hover:!bg-primary hover:!text-white'>
-            <MdOutlineZoomOutMap className='text-[18px]' />
+          text-black hover:!bg-primary hover:!text-white group'
+          onClick={()=>context.setOpenProductDetailsModel(true)}>
+            <MdOutlineZoomOutMap className='text-[18px] ' />
           </Button>
           <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white 
-          text-black hover:!bg-primary hover:!text-white'>
-            <IoGitCompareOutline className='text-[18px]' />
+          text-black hover:!bg-primary hover:!text-white group'>
+            <IoGitCompareOutline className='text-[18px]  ' />
             </Button>
           <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white 
-          text-black hover:!bg-primary hover:!text-white'>
-            <FaRegHeart className='text-[18px]' />
+          text-black hover:!bg-primary hover:!text-white group'>
+            <FaRegHeart className='text-[18px] ' />
           </Button>
         </div>
       </div>
