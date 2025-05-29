@@ -14,7 +14,11 @@ import { IoCloseSharp } from 'react-icons/io5'
 import ProductDetailsComponent from './components/ProductDetails'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
-
+import CartPage from './Pages/Cart'
+import Verify from './components/Verify'
+import toast, { Toaster } from 'react-hot-toast';
+import { MdSportsGolf } from 'react-icons/md'
+import ForgotPassword from './Pages/ForgotPassword'
 
 const MyContext = createContext()
 
@@ -34,11 +38,21 @@ function App() {
   const toggleCartPanel = (newOpen) => () => {
     setOpenCartPanel(newOpen);
   };
+  const openAlertBox = (status, msg) => {
+  if (status === "success") {
+    toast.success(msg);
+  }
+  if (status === "error") {
+    toast.error(msg);
+  }
+  };
+
   const values = {
     setOpenProductDetailsModel,
     setOpenCartPanel,
     toggleCartPanel,
-    openCartPanel
+    openCartPanel,
+    openAlertBox
   } 
 
 
@@ -55,10 +69,17 @@ function App() {
         <Route path={'/productDetails/:id'} exact={true} element={<ProductDetails />} />
         <Route path={'/login'} exact={true} element={<Login />} />
         <Route path={'/register'} exact={true} element={<Register />} />
+        <Route path={'/cart'} exact={true} element={<CartPage />} />
+        <Route path={'/verify'} exact={true} element={<Verify />} />
+        <Route path={'/forgot-password'} exact={true} element={<ForgotPassword />} />
       </Routes>
       <Footer/>
       </MyContext.Provider>
       </BrowserRouter>
+
+      <Toaster />
+
+
       <Dialog 
         open={openProductDetailsModel}
         fullWidth={fullWidth}
