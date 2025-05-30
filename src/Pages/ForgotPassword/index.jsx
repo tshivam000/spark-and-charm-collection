@@ -1,22 +1,14 @@
 
-import React, { useContext, useState } from 'react'
+import React, {  useState } from 'react'
 import TextField  from '@mui/material/TextField'
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
 import { Button } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
-import { FcGoogle } from 'react-icons/fc'
-import { MyContext } from '../../App'
+
 
 const ForgotPassword = ()=>{
     const [isPasswordShow, setIsPasswordShow] = useState(false);
     const [isPasswordShow2, setIsPasswordShow2] = useState(false);
 
-    const context = useContext(MyContext)
-    const history = useNavigate()
-    const forgotPassword = ()=>{
-            history('/verify');
-            context.openAlertBox('success', 'OTP Send')
-    }
     return(
         <section className='sectiopn py-10'>
             <div className='container'>

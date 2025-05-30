@@ -10,6 +10,8 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import Tooltip from '@mui/material/Tooltip';
 import Navigation from './Navigation';
 import { MyContext } from '../../App';
+import { FaRegUser } from 'react-icons/fa';
+import { Button } from '@mui/material';
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -52,16 +54,30 @@ const Header = ()=>{
                             </Link>
                         </div>
                     </div>
-                     <div className='col2 w-[45%]'>
+                     <div className='col2 w-[40%]'>
                         <Search />
 
                      </div>
-                      <div className='col3 w-[30%] flex items-center pl-7'>
-                        <ul className='flex items-center justify-end w-full gap-3'>
+                      <div className='col3 w-[35%] flex items-center pl-7'>
+                            <ul className='flex items-center justify-end w-full gap-3'>
+                            {
+                            context.isLogin === false?
                             <li className='list-one font-[500]'>
                                 <Link to={'/login'} className='text-[15px] link font-[500] transition'>Login </Link>
                                 | <Link to={'/register'} className='text-[15px] link font-[500] transition'>Register</Link>
-                            </li>
+                            </li>:
+                            (
+                                <Button className='!text-[#000] myAccountWrap flex items-center gap-3 cursor-pointer'>
+                                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[#f1f1f1]'>
+                                        <FaRegUser className='text-[16px] text-[rgba(0,0,0,0.7)]'></FaRegUser>
+                                    </Button>
+                                    <div className='info flex flex-col'>
+                                        <h4 className='leading-3 text-[14px] text-[rgba(0.0.0.6)] font-[500] mb-0 text-left capitalize justify-start'>Shivam Thakur</h4>
+                                        <span className='text-[13px] text-[rgba(0.0.0.6)] font-[400] lowercase text-left justify-start'>tshivam817@gmail.com</span>
+                                    </div>
+                                </Button>
+                            )
+                            }
                             <li>
                                 <Tooltip title="Compare">
                                 <IconButton aria-label="cart" >

@@ -17,8 +17,8 @@ import Register from './Pages/Register'
 import CartPage from './Pages/Cart'
 import Verify from './components/Verify'
 import toast, { Toaster } from 'react-hot-toast';
-import { MdSportsGolf } from 'react-icons/md'
 import ForgotPassword from './Pages/ForgotPassword'
+import Checkout from './Pages/Checkout'
 
 const MyContext = createContext()
 
@@ -26,6 +26,7 @@ function App() {
   const [openProductDetailsModel, setOpenProductDetailsModel] = useState(false);
   const [fullWidth, setFullWidth] = useState(true)
   const [maxWidth, setMaxWidth] = useState('lg')
+  const [isLogin, setIsLogin] = useState(true)
   const [openCartPanel, setOpenCartPanel] = useState(false);
 
   const handleClickOpenProductDetailsModel = () => {
@@ -52,7 +53,9 @@ function App() {
     setOpenCartPanel,
     toggleCartPanel,
     openCartPanel,
-    openAlertBox
+    openAlertBox,
+    isLogin,
+    setIsLogin
   } 
 
 
@@ -72,6 +75,7 @@ function App() {
         <Route path={'/cart'} exact={true} element={<CartPage />} />
         <Route path={'/verify'} exact={true} element={<Verify />} />
         <Route path={'/forgot-password'} exact={true} element={<ForgotPassword />} />
+        <Route path={'/checkout'} exact={true} element={<Checkout />} />
       </Routes>
       <Footer/>
       </MyContext.Provider>
