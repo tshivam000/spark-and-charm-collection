@@ -1,12 +1,24 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TextField  from '@mui/material/TextField'
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
 import { Button } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FcGoogle } from 'react-icons/fc'
+import { MyContext } from '../../App'
+
 const Login = ()=>{
-    const [isPasswordShow, setIsPasswordShow] = useState(false)
+    const [isPasswordShow, setIsPasswordShow] = useState(false);
+    const [formFields, setFormsFields] = useState({
+        email:'',
+        password:''
+    });
+    const context = useContext(MyContext)
+    const history = useNavigate()
+    const forgotPassword = ()=>{
+            history('/verify');
+            context.openAlertBox('success', 'OTP Send')
+    }
     return(
         <section className='sectiopn py-10'>
             <div className='container'>
@@ -16,12 +28,13 @@ const Login = ()=>{
                     </h3>
                     <form className='w-full mt-5'>
                         <div className='form-group w-full mb-5'>
-                            <TextField type='email' id="email" label="Email Id *" variant="outlined" className='w-full'/>       
+                            <TextField type='email' id="email" name='name' label="Email Id *" variant="outlined" className='w-full'/>       
                         </div>
                         <div className='form-group w-full mb-5 relative'>
                             <TextField 
                             type={isPasswordShow===false ? 'password':'text'}
-                            id="password" label="Password *" variant="outlined" className='w-full'/>       
+                            id="password"
+                            name='password'  label="Password *" variant="outlined" className='w-full'/>       
                             <Button className='!absolute top-[10px] right-[5px] z-50 !w-[35px] !h-[35px]
                              !min-w-[35px] !rounded-full !text-black'
                              onClick={()=>setIsPasswordShow(!isPasswordShow)}>
@@ -31,7 +44,7 @@ const Login = ()=>{
                             }
                             </Button>
                         </div>  
-                        <a className='link cursor-pointer text-[14px] font-[600]'>Forgot Password?</a> 
+                        <a className='link cursor-pointer text-[14px] font-[600]' onClick={forgotPassword}>Forgot Password?</a> 
                         <div className='flex items-center w-full mt-3 mb-3'>
                             <Button className='btn-org w-full btn-md !text-[16px]'>Login</Button>    
                         </div>      
