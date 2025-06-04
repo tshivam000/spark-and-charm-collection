@@ -21,6 +21,9 @@
 ::-webkit-scrollbar-track{
   background: #fff!important;
 }
+.orders .overflow-x-auto::-webkit-scrollbar-thumb{
+  background: #ccc!important;
+}
 body{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -152,6 +155,18 @@ h1,h2,h3,h4,h5,h6{
 .btn-org:hover{
   background: #171717!important;
 }
+.btn-org.btn-border{
+  background:none!important;
+  color: #ff5252!important;
+  font-weight: 500;
+  border: 1px solid;
+  border-color: #ff5252!important;
+}
+.btn-org.btn-border:hover{
+  background: #171717!important;
+  color: #fff!important;
+   border-color: #171717!important;
+}
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate{
     color: #ff5252!important;
@@ -247,4 +262,30 @@ h1,h2,h3,h4,h5,h6{
 }
 .checkout .scroll::-webkit-scrollbar-thumb{
   background: #ccc !important;
+}
+#account-menu .MuiList-root{
+  width: 200px;
+}
+.myAccountTabs li a{
+  position: relative;
+  display: block;
+}
+.myAccountTabs li a:before{
+  content:'';
+  width: 3px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff5252;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.myAccountTabs li a.active::before{
+  height: 100%;
+  opacity: 1;
+  top: 0;
+}
+.myAccountTabs li a.active button svg{
+  color: #ff5252;
 }

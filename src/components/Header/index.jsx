@@ -4,15 +4,17 @@ import Search from '../Search'
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
-import { IoCartOutline } from "react-icons/io5";
+import { IoBagCheckOutline, IoCartOutline } from "react-icons/io5";
 import { IoGitCompareOutline } from "react-icons/io5";
-import { IoMdHeartEmpty } from "react-icons/io";
+import { IoIosLogOut, IoMdHeartEmpty } from "react-icons/io";
 import Tooltip from '@mui/material/Tooltip';
 import Navigation from './Navigation';
 import { MyContext } from '../../App';
 import { FaRegUser } from 'react-icons/fa';
 import { Button } from '@mui/material';
-
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -23,6 +25,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 const Header = ()=>{
+const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
     const context = useContext(MyContext)
     return (
         <header className='bg-white'>
@@ -67,15 +77,42 @@ const Header = ()=>{
                                 | <Link to={'/register'} className='text-[15px] link font-[500] transition'>Register</Link>
                             </li>:
                             (
-                                <Button className='!text-[#000] myAccountWrap flex items-center gap-3 cursor-pointer'>
-                                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-[#f1f1f1]'>
+                                <>
+                                <Button                           
+                                    aria-controls={open ? 'account-menu' : undefined}
+                                    aria-haspopup="true"
+                                    aria-expanded={open ? 'true' : undefined}
+                                    onClick={handleClick} className='!text-[#000] myAccountWrap flex items-center gap-3 cursor-pointer '>
+                                    <div className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-[#f1f1f1] flex items-center justify-center'>
                                         <FaRegUser className='text-[16px] text-[rgba(0,0,0,0.7)]'></FaRegUser>
-                                    </Button>
-                                    <div className='info flex flex-col'>
+                                    </div>
+                                    <div className='info flex flex-col justify-between'>
                                         <h4 className='leading-3 text-[14px] text-[rgba(0.0.0.6)] font-[500] mb-0 text-left capitalize justify-start'>Shivam Thakur</h4>
                                         <span className='text-[13px] text-[rgba(0.0.0.6)] font-[400] lowercase text-left justify-start'>tshivam817@gmail.com</span>
                                     </div>
                                 </Button>
+                                <Menu
+                                    id="account-menu"
+                                    anchorEl={anchorEl}
+                                    open={open}
+                                    onClose={handleClose}
+                                >
+                                    <Link to={'/my-account'} className='w-full block'>
+                                    <MenuItem onClick={handleClose} className='flex gap-2 !py-3'>
+                                    <FaRegUser className='text-[18px]'/> <span className='text-[14px]'>My account</span></MenuItem>
+                                    </Link>
+                                    <Link to={'/my-orders'} className='w-full block'>
+                                    <MenuItem onClick={handleClose} className='flex gap-2 !py-3'>
+                                    <IoBagCheckOutline className='text-[18px]'/> <span className='text-[14px]'>Orders</span></MenuItem>
+                                    </Link>
+                                    <Link to={'/my-list'} className='w-full block'>
+                                    <MenuItem onClick={handleClose} className='flex gap-2 !py-3'>
+                                    <IoMdHeartEmpty className='text-[18px]'/> <span className='text-[14px]'>My List</span></MenuItem>
+                                    </Link>
+                                    <MenuItem onClick={handleClose} className='flex gap-2 !py-3'>
+                                    <IoIosLogOut className='text-[18px]'/> <span className='text-[14px]'>Logout</span></MenuItem>                                    
+                                </Menu>
+                                </>
                             )
                             }
                             <li>

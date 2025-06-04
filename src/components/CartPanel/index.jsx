@@ -46,7 +46,7 @@ const CartPanel = () => {
             </div>
             <div className='flex items-center justify-between w-full mt-4 gap-5'>
                 <Link to={'/cart'} className='w-[50%] d-block'><Button className='w-full btn-org btn-md '>View Cart</Button></Link>
-                <Link to={'/checkout'} className='w-[50%] d-block'><Button className='w-full btn-org btn-md '>CheckOut</Button></Link>
+                <Link to={'/checkout'} className='w-[50%] d-block'><Button className='w-full btn-org btn-border btn-md '>CheckOut</Button></Link>
             </div>
         </div>
         </div>
