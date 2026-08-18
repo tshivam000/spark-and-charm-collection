@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import AccountSidebar from '../AccountSidebar'
+import AccountSidebar from '../../components/AccountSidebar'
 import { Button } from '@mui/material'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
-import Badge from '../Badge'
+import Badge from '../../components/Badge'
 
 
 const Orders = () => {

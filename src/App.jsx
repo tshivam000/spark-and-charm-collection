@@ -19,9 +19,9 @@ import Verify from './components/Verify'
 import toast, { Toaster } from 'react-hot-toast';
 import ForgotPassword from './Pages/ForgotPassword'
 import Checkout from './Pages/Checkout'
-import MyAccount from './components/MyAccount'
+import MyAccount from './Pages/MyAccount'
 import MyList from './Pages/MyList'
-import Orders from './components/Orders'
+import Orders from './Pages/Orders'
 
 
 
